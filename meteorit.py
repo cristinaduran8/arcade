@@ -46,13 +46,6 @@ class Ball:
         if self.position_y > SCREEN_HEIGHT - self.radius:
             self.change_y *= -1
 
-def colisio(a,b):
-    distancia = math.sqrt(math.pow((a.position_x - b.position_x),2) + math.pow((a.position_y - b.position_y),2))
-    #print(distancia)
-    if distancia <= (a.radius) + (b.radius):
-        return True
-    else:
-        return False
 
 def rectangle():
     arcade.draw_lrtb_rectangle_filled(0, 639, 240, 0, arcade.csscolor.GREEN)
